@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title
+      | SocialAuth
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    link  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"
+    script  src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+    script  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+  body
+    .container-fluid
+      nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+        button.navbar-toggler.navbar-toggler-right aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
+          span.navbar-toggler-icon
+        a.navbar-brand href="#"  Social-auth
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link href="#"
+                | Contacts
+                span.sr-only (current)
+          form.form-inline.my-2.my-lg-0
+            ul.navbar-nav.mr-auto
+              li.nav-item.active
+                a.nav-link href="#"
+                  | Contacts
+
+      .container
+        = yield
