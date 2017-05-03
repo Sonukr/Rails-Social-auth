@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @contact.name
+p
+  strong Number:
+  = @contact.number
+p
+  strong Picture:
+  = @contact.picture
+
+= link_to 'Edit', edit_contact_path(@contact)
+'  |
+= link_to 'Back', contacts_path
